@@ -7,6 +7,7 @@ X = dataset.iloc[:, 1:-1].values
 y = dataset.iloc[:, -1].values
 
 # Training the Polynomial Regression model on the whole dataset
+from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 poly_reg = PolynomialFeatures(degree = 4)
 X_poly = poly_reg.fit_transform(X)
